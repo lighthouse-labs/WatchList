@@ -5,6 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <input id="watch-input" placeholder="Watch would you like to watch ?"></input>
+        <button id="watch-search">Search</button>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
