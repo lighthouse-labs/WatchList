@@ -25,6 +25,10 @@
    color: #282c34;
  }
 
+ #watch-input::placeholder{
+   color:#282c34;
+ }
+
  #watch-search{
    width: 56%;
    border-radius: 10px;
