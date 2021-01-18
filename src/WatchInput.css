@@ -1,0 +1,27 @@
+#watch-input-container{
+    width: 100%;
+}
+
+#watch-input{
+    width: 55%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    color: #282c34;
+  }
+ 
+  #watch-input::placeholder{
+    color:#282c34;
+  }
+ 
+  #watch-search{
+    width: 56%;
+    border-radius: 10px;
+    border-color: transparent;
+    font-size: 20px;
+    margin-top: 5px;
+    background-color: #8fd1eb;
+    color: #282c34;
+    outline: none;
+  }
