@@ -9,6 +9,7 @@
     font-size: 20px;
     outline: none;
     color: #282c34;
+    caret-color: transparent !important;
   }
  
   #watch-input::placeholder{
