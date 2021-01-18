@@ -9,8 +9,9 @@ class WatchInput extends Component {
         const handlePress = (event) => {
             if(event.key === 'Enter'){
             let newMovie = event.target.value;
-            this.props.addMovie(newMovie);
-            
+            console.log(newMovie)
+            // this.props.addMovie(newMovie);
+
               event.target.value = "";
               event.target.placeholder = "What would you like to watch ?";
             }
@@ -30,7 +31,7 @@ class WatchInput extends Component {
 
         return(
             <div id="watch-input-container">
-                <input id="watch-input" placeholder="What would you like to watch ?" onKeyPress={handlePress} onClick={onClick}></input>
+                <input id="watch-input" placeholder="What would you like to watch ?" onKeyPress={handlePress} onClick={onClick} ></input>
                 <button id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>Search</button>
             </div>
         );

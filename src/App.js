@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import WatchInput from './WatchInput';
 
+
 class App extends Component {
 
    render() {
+
+    // addMovie = (newMovie) => {
+    //   console.log(this.props.movies);
+    //   // let movie = this.props.movies;
+    // }
+
     return (
       <div className="App">
         <header className="App-header">
