@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import WatchInput from './WatchInput';
-// import TweenMax  from 'gsap'
-
 
 class App extends Component {
 
