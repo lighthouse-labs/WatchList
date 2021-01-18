@@ -8,6 +8,9 @@ class WatchInput extends Component {
 
         const handlePress = (event) => {
             if(event.key === 'Enter'){
+            let newMovie = event.target.value;
+            this.props.addMovie(newMovie);
+            
               event.target.value = "";
               event.target.placeholder = "What would you like to watch ?";
             }
