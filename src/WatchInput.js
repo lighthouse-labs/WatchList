@@ -47,7 +47,7 @@ class WatchInput extends Component {
         return(
             <div id="watch-input-container">
                 <input type="text" id="watch-input" placeholder="What would you like to watch ?" onKeyPress={handlePress} onClick={onClick} />
-                <select ref="category" id="media-catrgory">
+                <select ref="category" id="media-category">
 
                 </select>
                 <button id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>Search</button>
