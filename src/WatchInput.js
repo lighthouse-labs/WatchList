@@ -1,10 +1,22 @@
 import React, {Component} from 'react';
 import './WatchInput.css';
 import TweenMax  from 'gsap'
-
+import MovieOutput from './MovieOutput.js';
 
 class WatchInput extends Component {
+
+
     render(){
+
+        let mediaItems;
+        if(this.props.media){
+            mediaItems = this.props.media.map(media =>{
+                return(
+                    <MovieOutput media={media} />
+                );
+            });
+        }
+
 
         const handlePress = (event) => {
             if(event.key === 'Enter'){
@@ -33,6 +45,10 @@ class WatchInput extends Component {
             <div id="watch-input-container">
                 <input id="watch-input" placeholder="What would you like to watch ?" onKeyPress={handlePress} onClick={onClick} ></input>
                 <button id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>Search</button>
+            
+                <div id="movie-output-container">
+                    {mediaItems}
+                </div>
             </div>
         );
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import WatchInput from './WatchInput';
-import MovieOutput from './MovieOutput';
+// import MovieOutput from './MovieOutput';
 
 
 class App extends Component {
@@ -35,8 +35,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <MovieOutput media={this.state.media}/>
-          <WatchInput />
+          {/* <MovieOutput media={this.state.media}/> */}
+          <WatchInput media={this.state.media}/>
           {/* <p>
             Edit <code>src/App.js</code> and save to reload.
           </p> */}
