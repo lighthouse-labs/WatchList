@@ -34,6 +34,7 @@
     font-size: 20px;
     outline: none;
     color: #282c34;
+    text-align-last:center;
 }
 
 #movie-output-container{

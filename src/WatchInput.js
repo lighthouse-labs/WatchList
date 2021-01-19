@@ -5,11 +5,15 @@ import MovieOutput from './MovieOutput.js';
 
 class WatchInput extends Component {
 
-    static defaultProps ={
+    static defaultProps = {
         categories: ['Tv Show', 'Movie']
     }
 
     render(){
+
+        let categoryOptions = this.props.categories.map(category => {
+            return <option key={category} value="category">{category}</option>
+        })
 
         let mediaItems;
         if(this.props.media){
@@ -46,9 +50,9 @@ class WatchInput extends Component {
 
         return(
             <div id="watch-input-container">
-                <input type="text" id="watch-input" placeholder="What would you like to watch ?" onKeyPress={handlePress} onClick={onClick} />
+                <input type="text" id="watch-input" placeholder="What would you like to watch ?" autocomplete="off" onKeyPress={handlePress} onClick={onClick} />
                 <select ref="category" id="media-category">
-
+                    {categoryOptions}
                 </select>
                 <button id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>Search</button>
             
