@@ -5,7 +5,7 @@ import './MovieOutput.css';
 class MovieOutput extends Component {
     render(){
         
-
+        console.log(this.props.media[0].title)
         // addMovie = (newMovie) => {
         //     console.log(this.props.movies);
         //     // let movie = this.props.movies;
