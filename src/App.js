@@ -26,12 +26,16 @@ class App extends Component {
     ]});
   }
 
+  handleAddMedia(media){
+    // console.log(media)
+  }
+
    render() {
 
     return (
       <div className="App">
         <header className="App-header">
-          <WatchInput media={this.state.media}/>
+          <WatchInput media={this.state.media} addMedia={this.handleAddMedia.bind(this)}/>
         </header>
       </div>
     );

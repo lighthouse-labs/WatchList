@@ -34,8 +34,8 @@ class WatchInput extends Component {
 
         const handlePress = (event) => {
             if(event.key === 'Enter'){
-            let newMovie = event.target.value;
-            console.log(newMovie)
+            // let newMovie = event.target.value;
+            // console.log(newMovie)
             // this.props.addMovie(newMovie);
 
               event.target.value = "";
@@ -47,7 +47,14 @@ class WatchInput extends Component {
             if(this.refs.title.value === ''){
                 alert('title is required')
             } else {
-            console.log(this.refs.title.value)
+                this.setState({newMedia: {
+                    title: this.refs.title.value,
+                    category: this.refs.category.value
+                }}, function (){
+                    // console.log(this.state);
+                    this.props.addMedia(this.state.newMedia)
+                });
+                // console.log(this.refs.title.value)
             }
             event.preventDefault();
         }
