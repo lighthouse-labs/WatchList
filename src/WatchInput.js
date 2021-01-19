@@ -19,7 +19,7 @@ class WatchInput extends Component {
     render(){
 
         let categoryOptions = this.props.categories.map(category => {
-            return <option key={category} value="category">{category}</option>
+            return <option key={category} value={category}>{category}</option>
         })
 
         let mediaItems;
@@ -79,7 +79,7 @@ class WatchInput extends Component {
                 <select  ref="category" id="media-category">
                     {categoryOptions}
                 </select>
-                <button type="submit" id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} onClick={addMedia}>Search</button>
+                <button type="submit" id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} onClick={addMedia}>Add</button>
                 <div id="movie-output-container">
                     {mediaItems}
                 </div>

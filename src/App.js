@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   handleAddMedia(newMedia){
-    // console.log(media)
+    console.log(newMedia)
     let media = this.state.media;
     media.push(newMedia);
     this.setState({media:media})
