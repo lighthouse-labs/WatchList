@@ -5,6 +5,13 @@ import MovieOutput from './MovieOutput.js';
 
 class WatchInput extends Component {
 
+    constructor(){
+        super();
+        this.state = {
+            newMedia: {}
+        }
+    }
+
     static defaultProps = {
         categories: ['Tv Show', 'Movie']
     }
@@ -36,6 +43,11 @@ class WatchInput extends Component {
             }
         }
 
+        const addMedia = (event) =>{
+            console.log(this.refs.title.value)
+            event.preventDefault();
+        }
+
         const onClick = (event) => {
             event.target.placeholder = "";
         }
@@ -50,11 +62,11 @@ class WatchInput extends Component {
 
         return(
             <div id="watch-input-container">
-                <input type="text" id="watch-input" placeholder="What would you like to watch ?" autocomplete="off" onKeyPress={handlePress} onClick={onClick} />
-                <select ref="category" id="media-category">
+                <input ref="title" type="text" id="watch-input" placeholder="What would you like to watch ?" autoComplete="off" onKeyPress={handlePress} onClick={onClick} />
+                <select  ref="category" id="media-category">
                     {categoryOptions}
                 </select>
-                <button id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>Search</button>
+                <button type="submit" id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} onClick={addMedia}>Search</button>
             
                 <div id="movie-output-container">
                     {mediaItems}
