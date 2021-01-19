@@ -9,7 +9,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      movies: [
+      media: [
         {
           title: "Jupiter's Legacy",
           category: "TV Show",
@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <MovieOutput movies={this.state.movies}/>
+          <MovieOutput media={this.state.media}/>
           <WatchInput />
           {/* <p>
             Edit <code>src/App.js</code> and save to reload.

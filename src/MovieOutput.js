@@ -13,7 +13,7 @@ class MovieOutput extends Component {
 
         return(
             <div id="movie-output-container">
-                <h1 id="movie-info">{this.props.movies.title}</h1>
+                <h1 id="movie-info">{this.props.media.title}</h1>
             </div>
         );
     }
