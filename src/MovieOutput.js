@@ -14,7 +14,7 @@ class MovieOutput extends Component {
         return(
             // <div id="movie-output-container">
                 <li className="media-info">
-                    {this.props.media.title} - {this.props.media.category} - {this.props.media.release}
+                    <strong>{this.props.media.title}</strong>:  {this.props.media.release} {this.props.media.category}  
                 </li>
             // </div>
         );

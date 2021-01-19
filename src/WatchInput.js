@@ -12,7 +12,7 @@ class WatchInput extends Component {
         if(this.props.media){
             mediaItems = this.props.media.map(media =>{
                 return(
-                    <MovieOutput media={media} />
+                    <MovieOutput  key={media.title} media={media} />
                 );
             });
         }

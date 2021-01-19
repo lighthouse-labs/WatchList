@@ -12,11 +12,11 @@
     caret-color: transparent !important;
   }
  
-  #watch-input::placeholder{
+#watch-input::placeholder{
     color:#282c34;
-  }
- 
-  #watch-search{
+}
+
+#watch-search{
     width: 56%;
     border-radius: 10px;
     border-color: transparent;
@@ -25,12 +25,19 @@
     background-color: #8fd1eb;
     color: #282c34;
     outline: none;
-  }
+}
 
-  #movie-output-container{
+#movie-output-container{
     width: 55%;
     height: 100%;
     background-color: white;
     border-radius: 10px;
     margin: 5px auto;
+}
+
+
+.media-info{
+    font-size: 20px;
+    color: #282c34;
+    list-style: none;
 }
