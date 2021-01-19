@@ -5,6 +5,9 @@ import MovieOutput from './MovieOutput.js';
 
 class WatchInput extends Component {
 
+    static defaultProps ={
+        categories: ['Tv Show', 'Movie']
+    }
 
     render(){
 
@@ -43,7 +46,10 @@ class WatchInput extends Component {
 
         return(
             <div id="watch-input-container">
-                <input id="watch-input" placeholder="What would you like to watch ?" onKeyPress={handlePress} onClick={onClick} ></input>
+                <input type="text" id="watch-input" placeholder="What would you like to watch ?" onKeyPress={handlePress} onClick={onClick} />
+                <select ref="category" id="media-catrgory">
+
+                </select>
                 <button id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>Search</button>
             
                 <div id="movie-output-container">
