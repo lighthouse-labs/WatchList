@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {v4 as uuidv4} from "uuid"; 
 import './WatchInput.css';
 import TweenMax  from 'gsap'
 import MovieOutput from './MovieOutput.js';
@@ -48,6 +49,7 @@ class WatchInput extends Component {
                 alert('title  and date is required')
             } else {
                 this.setState({newMedia: {
+                    id: uuidv4(),
                     title: this.refs.title.value,
                     category: this.refs.category.value,
                     release: this.refs.date.value
