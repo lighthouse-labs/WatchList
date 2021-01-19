@@ -12,6 +12,10 @@ class App extends Component {
     }
   }
 
+  getMedia(){
+
+  }
+
   componentDidMount(){
     this.setState({media: [
         {
@@ -27,6 +31,7 @@ class App extends Component {
           release: "March 12 2021"
         }
     ]});
+    this.getMedia();
   }
 
   handleAddMedia(newMedia){
