@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {v4 as uuidv4} from "uuid"; 
+import cheerio from 'cheerio';
 import './App.css';
 import WatchInput from './WatchInput';
 
@@ -13,7 +14,15 @@ class App extends Component {
   }
 
   getMedia(){
-
+    fetch('https://theskylive.com/mars-tracker', (error, response, html) => {
+      if (!error && response.statusCode === 200){
+        const $ = cheerio.load(html)
+    
+        const earthMars = $('#disearth');
+        const earthMarsDistance = earthMars.text();
+        console.log("Grabbed : " + earthMarsDistance);
+      }
+    });
   }
 
   componentDidMount(){
