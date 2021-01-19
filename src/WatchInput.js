@@ -44,7 +44,11 @@ class WatchInput extends Component {
         }
 
         const addMedia = (event) =>{
+            if(this.refs.title.value === ''){
+                alert('title is required')
+            } else {
             console.log(this.refs.title.value)
+            }
             event.preventDefault();
         }
 
