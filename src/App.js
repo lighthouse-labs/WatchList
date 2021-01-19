@@ -26,8 +26,11 @@ class App extends Component {
     ]});
   }
 
-  handleAddMedia(media){
+  handleAddMedia(newMedia){
     // console.log(media)
+    let media = this.state.media;
+    media.push(newMedia);
+    this.setState({media:media})
   }
 
    render() {

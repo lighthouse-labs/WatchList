@@ -44,12 +44,13 @@ class WatchInput extends Component {
         }
 
         const addMedia = (event) =>{
-            if(this.refs.title.value === ''){
-                alert('title is required')
+            if(this.refs.title.value === '' || this.refs.date.value === ''){
+                alert('title  and date is required')
             } else {
                 this.setState({newMedia: {
                     title: this.refs.title.value,
-                    category: this.refs.category.value
+                    category: this.refs.category.value,
+                    release: this.refs.date.value
                 }}, function (){
                     // console.log(this.state);
                     this.props.addMedia(this.state.newMedia)
@@ -74,11 +75,11 @@ class WatchInput extends Component {
         return(
             <div id="watch-input-container">
                 <input ref="title" type="text" id="watch-input" placeholder="What would you like to watch ?" autoComplete="off" onKeyPress={handlePress} onClick={onClick} />
+                <input ref="date" type="text" id="watch-date-input" placeholder="Please enter a date" autoComplete="off" />
                 <select  ref="category" id="media-category">
                     {categoryOptions}
                 </select>
                 <button type="submit" id="watch-search" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} onClick={addMedia}>Search</button>
-            
                 <div id="movie-output-container">
                     {mediaItems}
                 </div>
