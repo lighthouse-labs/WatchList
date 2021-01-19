@@ -36,12 +36,19 @@ class App extends Component {
     this.setState({media:media})
   }
 
+  handleDeleteMedia(id){
+    let media = this.state.media;
+    let index = media.findIndex(x => x.id === id);
+    media.splice(index, 1)
+    this.setState({media:media})
+  }
+
    render() {
 
     return (
       <div className="App">
         <header className="App-header">
-          <WatchInput media={this.state.media} addMedia={this.handleAddMedia.bind(this)}/>
+          <WatchInput media={this.state.media} addMedia={this.handleAddMedia.bind(this)} onDelete={this.handleDeleteMedia.bind(this)}/>
         </header>
       </div>
     );

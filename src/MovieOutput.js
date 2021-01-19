@@ -4,8 +4,8 @@ import './MovieOutput.css';
 
 class MovieOutput extends Component {
     
-    deleteMedia(){
-        this.props.onDelete(this.props.media.id);
+    deleteMedia(id){
+        this.props.onDelete(id);
     }
 
 

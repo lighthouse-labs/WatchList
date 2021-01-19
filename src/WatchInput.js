@@ -17,6 +17,10 @@ class WatchInput extends Component {
         categories: ['Tv Show', 'Movie']
     }
 
+    deleteMedia(id){
+        this.props.onDelete(id);
+    }
+
     render(){
 
         let categoryOptions = this.props.categories.map(category => {
@@ -27,7 +31,7 @@ class WatchInput extends Component {
         if(this.props.media){
             mediaItems = this.props.media.map(media =>{
                 return(
-                    <MovieOutput  key={media.title} media={media} />
+                    <MovieOutput  onDelete={this.deleteMedia.bind(this)} key={media.title} media={media} />
                 );
             });
         }
