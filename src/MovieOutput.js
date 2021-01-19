@@ -6,14 +6,14 @@ class MovieOutput extends Component {
     render(){
         
 
-        addMovie = (newMovie) => {
-            console.log(this.props.movies);
-            // let movie = this.props.movies;
-        }
+        // addMovie = (newMovie) => {
+        //     console.log(this.props.movies);
+        //     // let movie = this.props.movies;
+        // }
 
         return(
             <div id="movie-output-container">
-                <h1>{this.props.movies}</h1>
+                <h1 id="movie-info">{this.props.movies.title}</h1>
             </div>
         );
     }
