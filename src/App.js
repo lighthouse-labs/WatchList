@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   handleAddMedia(newMedia){
-    console.log(newMedia)
+    console.table(newMedia)
     let media = this.state.media;
     media.push(newMedia);
     this.setState({media:media})
