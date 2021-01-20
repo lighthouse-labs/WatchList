@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import cheerio from 'cheerio';
 import './App.css';
 import WatchInput from './WatchInput';
-import { _checkPlugin } from 'gsap/gsap-core';
+
 
 class App extends Component {
 
@@ -22,9 +22,10 @@ class App extends Component {
     .then(data => {
       const $ = cheerio.load(data);
       const mediaTitle = $ ('.poster').attr('title');
-      const mediaRelease =$ ();
+      const mediaRelease = $ ('.info span').innerHTML();
       const posterSource = $('.poster img').attr('src');
       console.log(mediaTitle);
+      console.log(mediaRelease);
       console.log(posterSource);
       this.setState({newReleases: {
         title: mediaTitle,
