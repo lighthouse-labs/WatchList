@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       media: [],
       data: [],
-      newReleases: []
+      newReleases: {}
     }
   }
 
@@ -22,11 +22,15 @@ class App extends Component {
     .then(data => {
       const $ = cheerio.load(data);
       const mediaTitle = $ ('.poster').attr('title');
-      const mediaRelease =$ )_checkPlugin;
+      const mediaRelease =$ ();
       const posterSource = $('.poster img').attr('src');
       console.log(mediaTitle);
       console.log(posterSource);
-      this.setState({newReleases: $(".posterSource").html() });
+      this.setState({newReleases: {
+        title: mediaTitle,
+        release: mediaRelease,
+        poster: posterSource
+      }})
     })
     .catch(error => {
       this.setState({error: error});
