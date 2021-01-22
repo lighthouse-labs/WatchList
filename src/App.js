@@ -33,7 +33,7 @@ class App extends Component {
         release: mediaRelease,
         poster: posterSource
       }})
-      console.log(this.newRelease[0])
+      
     })
     .catch(error => {
       this.setState({error: error});
