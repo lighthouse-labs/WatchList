@@ -13,7 +13,7 @@ class Calender extends Component {
 
         return(
             <div id="calender-container">
-
+                <h2>Calender</h2>
             </div>
         );
     }

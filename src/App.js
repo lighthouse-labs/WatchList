@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import cheerio from 'cheerio';
 import './App.css';
 import WatchInput from './WatchInput';
+import Calender from './Calender';
 
 
 class App extends Component {
@@ -77,6 +78,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <WatchInput media={this.state.media} addMedia={this.handleAddMedia.bind(this)} onDelete={this.handleDeleteMedia.bind(this)}/>
+          <Calender />
         </header>
       </div>
     );
