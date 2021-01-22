@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   getMedia =() => {
-    fetch('https://www2.bflix.to/')
+    fetch('https://www3.bflix.to/home')
     .then(response => response.text())
     .then(data => {
       const $ = cheerio.load(data);
@@ -32,6 +32,7 @@ class App extends Component {
         release: mediaRelease,
         poster: posterSource
       }})
+      console.log(this.newRelease[0])
     })
     .catch(error => {
       this.setState({error: error});
